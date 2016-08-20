@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'texasfiles.wsgi.application'
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
 DATABASES = {
-   'default': {
+   'default_local': {
         'ENGINE'  : 'django.db.backends.postgresql_psycopg2',
         'NAME'    : 'texas',
         'USER'    : 'test',
@@ -85,6 +85,14 @@ DATABASES = {
         'HOST'    : 'localhost',
         'PORT'    : '',
     },
+   'default': {
+        'ENGINE'  : 'django.db.backends.postgresql_psycopg2',
+        'NAME'    : 'dfq7mt79m78klb',
+        'USER'    : 'ixyukjzmfvrqpw',
+        'PASSWORD': 'MyWJAwN9Zy9AHn_n_Tl0EnE4K7',
+        'HOST'    : 'ec2-54-243-220-140.compute-1.amazonaws.com',
+        'PORT'    : '5432',
+    }
 }
 
 
