@@ -22,8 +22,8 @@ def get_values(request):
             result["data"].append(file_obj.data)
 
         return JsonResponse(result)
-    except:
-        return JsonResponse({"Error": "Unable to serve your request"})
+    except Exception as err:
+        return JsonResponse({"Error": "Unable to serve your request " + err})
 
 
 
