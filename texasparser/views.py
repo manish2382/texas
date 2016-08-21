@@ -23,7 +23,7 @@ def get_values(request):
 
         return JsonResponse(result)
     except Exception as err:
-        return JsonResponse({"Error": "Unable to serve your request " + err})
+        return JsonResponse({"Error": "Unable to serve your request " + str(err)})
 
 
 
