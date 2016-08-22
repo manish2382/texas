@@ -16,10 +16,13 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from texasparser.views import get_values, get_value
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^api/', 'texasparser.views.get_values'),
+    url(r'^api/(?P<obj_id>[0-9]+)/$', get_value, name='get_value'),
+    url(r'^api/', get_values, name="get_values"),
+
 ]
 
 

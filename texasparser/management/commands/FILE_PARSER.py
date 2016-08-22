@@ -59,7 +59,7 @@ class Command(BaseCommand):
                     elements[headers[-1]] = fix_data(caching, row)
 
                     # collect the data together
-                    if not result or result[-1] != elements:
+                    if elements not in result:
                         result.append(elements)
 
             # save the processed data to database.
